@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         //LIMITAR MOV DEL PLAYER A 2
     }
 
-    void onCollisionEnter(Collision col)
+    void OnCollisionEnter(Collision col)
     {
         if(col.gameObject.CompareTag("Caja"))
         {
