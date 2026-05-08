@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Caja
+  - Helice
   layers:
   - Default
   - TransparentFX

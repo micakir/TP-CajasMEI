@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class MovPlayer : MonoBehaviour
 {
-
     public float min = -2f;
-    public float max = 2f;
-    
+    public float max = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,22 +20,20 @@ public class PlayerController : MonoBehaviour
         {
             transform.Translate(-2,0,0);
             float restrictedX = Mathf.Clamp(transform.position.x, min, max);
-            transform.position = new Vector3(restrictedX, 0.5f, 0.75f);
+            transform.position = new Vector3(restrictedX, 0.5f, 0f);
         }
           
         if(Input.GetKeyDown(KeyCode.RightArrow)||Input.GetKeyDown(KeyCode.D))
         {
             transform.Translate(2,0,0);
             float restrictedX = Mathf.Clamp(transform.position.x, min, max);
-            transform.position = new Vector3(restrictedX, 0.5f, 0.75f);
+            transform.position = new Vector3(restrictedX, 0.5f, 0f);
         }
-
-        //Calculo que debe haber una mejor manera pero bueno esto fue lo que salió
     }
 
     void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.CompareTag("Caja"))
+        if(col.gameObject.CompareTag("Helice"))
         {
             Destroy(gameObject);
         }
