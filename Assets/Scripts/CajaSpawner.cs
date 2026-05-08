@@ -35,4 +35,5 @@ public class CajaSpawner : MonoBehaviour
     }
 
     //CUANDO LA CAJA TOQUE EL PISO QUE SE REPOSICIONE USANDO LA FUNCION
+    //ah pero para eso no esta hecho ya??
 }

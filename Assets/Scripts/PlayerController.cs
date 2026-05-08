@@ -16,14 +16,18 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.LeftArrow)||Input.GetKeyDown(KeyCode.A))
         {
             transform.Translate(-2,0,0);
+            float restrictedX = Mathf.Clamp(transform.position.x, min, max);
+            transform.position = new Vector3(restrictedX, 0.5f, 0.75f);
         }
           
         if(Input.GetKeyDown(KeyCode.RightArrow)||Input.GetKeyDown(KeyCode.D))
         {
             transform.Translate(2,0,0);
+            float restrictedX = Mathf.Clamp(transform.position.x, min, max);
+            transform.position = new Vector3(restrictedX, 0.5f, 0.75f);
         }
 
-        //LIMITAR MOV DEL PLAYER A 2
+        //Calculo que debe haber una mejor manera pero bueno esto fue lo que salió
     }
 
     void OnCollisionEnter(Collision col)
