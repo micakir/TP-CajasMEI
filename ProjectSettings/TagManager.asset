@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Caja
   - Helice
+  - Piso
   layers:
   - Default
   - TransparentFX

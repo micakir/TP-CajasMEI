@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimientoHelice : MonoBehaviour
+public class PlayerCollision : MonoBehaviour
 {
-    public float speed;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +13,14 @@ public class MovimientoHelice : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       transform.Rotate(-speed,0,0);   
+        
+    }
+
+     void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.CompareTag("Caja"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

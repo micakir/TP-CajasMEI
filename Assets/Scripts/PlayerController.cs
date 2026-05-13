@@ -33,12 +33,4 @@ public class PlayerController : MonoBehaviour
 
         //Calculo que debe haber una mejor manera pero bueno esto fue lo que salió
     }
-
-    void OnCollisionEnter(Collision col)
-    {
-        if(col.gameObject.CompareTag("Caja"))
-        {
-            Destroy(gameObject);
-        }
-    }
 }
