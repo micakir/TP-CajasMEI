@@ -4,19 +4,8 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-     void OnCollisionEnter(Collision col)
+  
+    void OnCollisionEnter(Collision col)
     {
         if(col.gameObject.CompareTag("Caja"))
         {
